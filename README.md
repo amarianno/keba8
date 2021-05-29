@@ -1,13 +1,10 @@
 # keba8
 - 👋 Hi, I’m @amarianno
 - 👀 I’m interested in Arduino, IoT, Robotica
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
 
 # Projeto
 
-KEBA8 é um projeto que visa dar um feedback visual para donos de plantinhas que querem saber quando regar sua planta. 
+KEBA8 é um projeto que visa dar um feedback visual para donos de plantinhas que querem saber quando regar sua planta. Inspirado no projeto https://www.publico.pt/2019/07/19/p3/noticia/um-vaso-que-te-ajuda-a-nao-matar-plantas-e-ainda-te-sorri-de-volta-1880501
 
 # Componentes
 

@@ -36,33 +36,46 @@ void loop()
   if (valor_analogico > 0 && valor_analogico < 400)
   {
     limpar();
-    Serial.println(" Status: Solo umido");
-     lcd.setCursor(4, 1);
-     lcd.print(      "=) Solo umido"        );
-     lcd.setCursor(6, 2);
-     lcd.print(     valor_analogico        );   
+    sorriso1();
+    //Serial.println(" Status: Solo umido");
+     //lcd.setCursor(1, 1);
+     //lcd.print(      "=) Solo umido "        );
+     //lcd.setCursor(6, 2);
+     //lcd.print(     valor_analogico        );   
   }
  
   //Solo com umidade moderada, acende led amarelo
   if (valor_analogico > 400 && valor_analogico < 800)
   {
     limpar();
-    Serial.println(" Status: Umidade moderada");
-    lcd.setCursor(4, 1);
-     lcd.print(      "=| Solo moderado"        );
-     lcd.setCursor(6, 2);
-     lcd.print(      valor_analogico        );
+    //Serial.println(" Status: Umidade moderada");
+    //lcd.setCursor(4, 1);
+     //lcd.print(      "=| Solo moderado"        );
+     //lcd.setCursor(6, 2);
+     //lcd.print(      valor_analogico        );
+
+        lcd.setCursor(7, 1);
+        lcd.print(      "(-) (#)"        );
+        lcd.setCursor(3, 2);
+        lcd.print(   "**************"    );
+        lcd.setCursor(13, 3);
+        lcd.print(           "(_)"  );
+        lcd.setCursor(16, 0);
+        lcd.print(   valor_analogico    );
   }
  
   //Solo seco, acende led vermelho
   if (valor_analogico > 800 && valor_analogico < 1024)
   {
     limpar();
-    Serial.println(" Status: Solo seco");
-    lcd.setCursor(4, 1);
-     lcd.print(      "=( Solo SECO"        );
-     lcd.setCursor(6, 2);
-     lcd.print(    valor_analogico        );
+    lcd.setCursor(7, 1);
+    lcd.print(      "(-) (-)"        );
+    lcd.setCursor(3, 2);
+    lcd.print(   "**************"    );
+    lcd.setCursor(1, 3);
+    lcd.print( "**              **"  );
+    lcd.setCursor(16, 0);
+    lcd.print(   valor_analogico    );
   }
   
   delay(7000);
@@ -86,8 +99,10 @@ void sorriso1() {
   lcd.print( "**              **"  );
   lcd.setCursor(3, 3);
   lcd.print(   "**************"    );
+  lcd.setCursor(16, 0);
+  lcd.print(   valor_analogico    );
 
-  delay(7000);
+  delay(3000);
 
   lcd.setCursor(7, 1);
   lcd.print(      "(-) (-)"        );
@@ -95,6 +110,8 @@ void sorriso1() {
   lcd.print( "**              **"  );
   lcd.setCursor(3, 3);
   lcd.print(   "**************"    );
+  lcd.setCursor(16, 0);
+  lcd.print(   valor_analogico    );
 
   delay(200);
 
@@ -104,6 +121,8 @@ void sorriso1() {
   lcd.print( "**              **"  );
   lcd.setCursor(3, 3);
   lcd.print(   "**************"    );
+  lcd.setCursor(16, 0);
+  lcd.print(   valor_analogico    );
 
   delay(200);
 
@@ -113,6 +132,19 @@ void sorriso1() {
   lcd.print( "**              **"  );
   lcd.setCursor(3, 3);
   lcd.print(   "**************"    );
+  lcd.setCursor(16, 0);
+  lcd.print(   valor_analogico    );
 
   delay(200);
+  
+  lcd.setCursor(7, 1);
+  lcd.print(      "(#) (#)"        );
+  lcd.setCursor(1, 2);
+  lcd.print( "**              **"  );
+  lcd.setCursor(3, 3);
+  lcd.print(   "**************"    );
+  lcd.setCursor(16, 0);
+  lcd.print(   valor_analogico    );
+
+
 }
