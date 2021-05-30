@@ -42,10 +42,10 @@ void loop()
      //lcd.print(      "=) Solo umido "        );
      //lcd.setCursor(6, 2);
      //lcd.print(     valor_analogico        );   
-  }
+  } else
  
   //Solo com umidade moderada, acende led amarelo
-  if (valor_analogico > 400 && valor_analogico < 800)
+  if (valor_analogico > 400 && valor_analogico < 600)
   {
     limpar();
     //Serial.println(" Status: Umidade moderada");
@@ -59,10 +59,21 @@ void loop()
         lcd.setCursor(3, 2);
         lcd.print(   "**************"    );
         lcd.setCursor(13, 3);
-        lcd.print(           "(_)"  );
+        lcd.print(           "|_|"  );
         lcd.setCursor(16, 0);
         lcd.print(   valor_analogico    );
-  }
+  } else
+
+  if (valor_analogico > 600 && valor_analogico < 800)
+  {
+        limpar();
+        lcd.setCursor(7, 1);
+        lcd.print(      "(#) (#)"        );
+        lcd.setCursor(3, 2);
+        lcd.print(   "**************"    );
+        lcd.setCursor(16, 0);
+        lcd.print(   valor_analogico    );
+  } else
  
   //Solo seco, acende led vermelho
   if (valor_analogico > 800 && valor_analogico < 1024)
@@ -78,7 +89,7 @@ void loop()
     lcd.print(   valor_analogico    );
   }
   
-  delay(7000);
+  delay(10000);
 }
 
 void limpar() {
